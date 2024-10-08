@@ -1,5 +1,5 @@
 <?php
-    include("connection.php");
+    include("../DATABASE/connection.php");
     $name = $mysqli->real_escape_string($_POST["name"]);
     $sql = "INSERT INTO peoples (id,Nome) VALUES (default, '$name')";
     $result = $mysqli->query($sql) or die("ERRO AO INSERIR - ".$mysqli->error);

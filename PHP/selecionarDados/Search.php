@@ -1,5 +1,5 @@
 <?php
-    include("../inserirdados/connection.php")
+    include("../DATABASE/connection.php")
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +15,7 @@
         <input name="Nome" placeholder="Digite o nome do participante ou id" type="text"> <br>
         <button type="submit">Pesquisar</button>
     </form>
+    <button onclick="window.location.href='../index.html'">voltar</button>
     <br>
     <table width="600px" border="1">
         <tr>
