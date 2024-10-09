@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/login/css/login-default.css">
+    <link rel="stylesheet" href="css/login-default.css">
     <title>PHP - Party</title>
 </head>
 <body>
     <main>
-        <form method="get" action="">
-            <img src="/imgs/php.png" alt="">
+        <form method="post" action="authenticator.php">
+            <img src="../imgs/php.png" alt="">
+            <h2>Cadastro</h2>
             <p>nome de usuário</p>
-            <input type="text">
+            <input name="username" type="text">
             <p>Senha</p>
-            <input type="password"><hr>
+            <input name="password" type="password"><hr>
             <button type="submit">Confirmar</button>
         </form>
     </main>
