@@ -27,7 +27,7 @@
         if ($result->num_rows > 0)
         {
             $_SESSION['username'] = $username;
-            ?><script>window.location.href="http://localhost/PHP/login/cake.php"</script><?php
+            ?><script>window.location.href="http://localhost:8080/PHP/miniblog/"</script><?php
         } else {
             echo "SENHA INCORRETA POR FAVOR VERIFIQUE SUA SENHA";
         }
