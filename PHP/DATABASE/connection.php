@@ -9,5 +9,5 @@
         die("FALHA AO CONECTAR : ". $mysqli->connect_error);
     } else
     {
-        echo "Conectado com sucesso";
+        echo "";
     }

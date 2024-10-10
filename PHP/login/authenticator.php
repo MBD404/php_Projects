@@ -7,13 +7,13 @@
         $password = $mysqli->real_escape_string($_POST["password"]);
         if ($username == "" or $password == "")
         {
-            ?><script>window.location.href="http://localhost:8080/PHP/login/registrar.html"</script><?php
+            ?><script>window.location.href="registrar.html"</script><?php
         }else 
         {
             $sql = "INSERT INTO users (id,username,pass_word) VALUES(default,'".$username."','".$password."')";
             $result = $mysqli->query($sql) or $mysqli.die("ERRO AO CADASTRAR USUÁRIO : ".$mysqli->error);
             echo "Dados foram transferido com sucesso";
-            ?><script>window.location.href="http://localhost:8080/PHP/login/"</script><?php
+            ?><script>window.location.href="./"</script><?php
             
         }
     }
@@ -27,7 +27,7 @@
         if ($result->num_rows > 0)
         {
             $_SESSION['username'] = $username;
-            ?><script>window.location.href="http://localhost:8080/PHP/login/cake.php"</script><?php
+            ?><script>window.location.href="http://localhost/PHP/login/cake.php"</script><?php
         } else {
             echo "SENHA INCORRETA POR FAVOR VERIFIQUE SUA SENHA";
         }
