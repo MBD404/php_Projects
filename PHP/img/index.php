@@ -1,7 +1,7 @@
 <?php
 
     include("conexao.php");
-    $sql_query  = $mysqli->query("SELECT * FROM imagens") or die($mysqli->error);
+    $sql_query  = $mysqli->query("SELECT * FROM arquivos") or die($mysqli->error);
 
 ?>
 <!DOCTYPE html>
