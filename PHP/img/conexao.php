@@ -1,6 +1,6 @@
 <?php
     $hostname = "localhost";
-    $bancodedados = "uploads";
+    $bancodedados = "party";
     $username = "root";
     $password = "";
 

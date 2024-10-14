@@ -20,9 +20,9 @@
         $deu_certo = move_uploaded_file($arquivo["tmp_name"], $path);
         if ($deu_certo)
         {
-            $mysqli->query("INSERT INTO arquivos (nome,path) VALUES('$nomeDoarquivo','$path')") or die($mysqli->error);
+            $mysqli->query("INSERT INTO imagens (nome,path) VALUES('$nomeDoarquivo','$path')") or die($mysqli->error);
             echo "<p>Arquivo enviado com sucesso : <a href='arquivos/$novoname.$extensao'> aqui </a></p>";
-            header("Location: http://localhost:8080/PHP/profile/");
+            header("Location: http://localhost/PHP/img/index.php");
         } else{
             echo "<p>FALHA</p>";
         }

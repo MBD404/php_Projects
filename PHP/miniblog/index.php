@@ -17,7 +17,7 @@
             <img src="../imgs/php.png" alt="" srcset="">
         </nav>
         <nav id="right">
-            <a href="posts.php">CRIE SUA POSTAGEM</a> <a href=""><?php echo "$username";?></a>
+            <a href="posts.php">CRIE SUA POSTAGEM</a> <a href="../profile/index.php"><?php echo "$username";?></a>
         </nav>
     </header>
     <main>
