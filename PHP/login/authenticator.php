@@ -22,13 +22,18 @@
         echo "Estamos Pegando Dados";
         $username = $mysqli->real_escape_string($_GET["username"]);
         $pass_word = $mysqli->real_escape_string($_GET["pass_word"]);
-        //$nickname = $mysqli->real_escape_string($_GET["nickname"]);
         $sql1 = "SELECT * FROM users u JOIN users_profile p ON u.id = p.id_user WHERE username LIKE '$username' AND pass_word LIKE '$pass_word'";
         $result = $mysqli->query($sql1) or $mysqli.die("".$mysqli->error);
         if ($result->num_rows > 0)
         {
-            $_SESSION['username'] = $row['nickname'];
-            ?><script>window.location.href="/PHP/miniblog/"</script><?php
+            while ($row = $result->fetch_assoc())
+            {
+                $_SESSION['nickname'] = $row['nickname'];
+                $_SESSION['username'] = $row['username'];
+            }
+            ?>
+            <script>window.location.href="/PHP/miniblog/"</script>
+            <?php
         } else {
             echo "SENHA INCORRETA POR FAVOR VERIFIQUE SUA SENHA";
         }

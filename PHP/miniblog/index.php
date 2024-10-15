@@ -1,7 +1,7 @@
 <?php
     include("../DATABASE/connection.php");
     session_start(); 
-    $username = $_SESSION['username']
+    $username = $_SESSION['nickname']
 ?>
 <!DOCTYPE html>
 <html lang="en">

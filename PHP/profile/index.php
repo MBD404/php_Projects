@@ -1,6 +1,7 @@
 <?php
     session_start();
-    $username = $_SESSION['username']
+    $nickname = $_SESSION['nickname'];
+    $username = $_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,14 @@
         </nav>
     </header>
     <body>
-        <h1><?php echo "$username"; ?></h1>
+        <h1><?php echo "$nickname"; ?></h1> <a onclick="">mudar nome</a>
+        <h2 id="real-name"></h2>
+        <script>
+            if ('<?php echo "$nickname"; ?>' != '<?php echo "$username" ?>' )
+            {
+                document.getElementById('real-name').innerText = "<?php echo "$username" ?>"
+            }
+        </script>
     </body>
 </body>
 </html>
