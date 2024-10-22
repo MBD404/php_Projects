@@ -4,6 +4,7 @@
     if (isset($_FILES['arquivo']))
     {
         $arquivo = $_FILES["arquivo"];
+        echo "".$arquivo["name"]."";
         if ($arquivo["error"])
             die("Falha ao enviar arquivo");
         if ($arquivo["size"] > 5000000)

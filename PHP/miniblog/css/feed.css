@@ -6,11 +6,15 @@ header
 {
     display: flex;
     border: 1px solid;
+    height: 10vh;
     width: 100%;
+    margin-bottom: 2vh;
 }
+
 img
 {
     width: 100px;
+    height: 60px;
 }
 main
 {
@@ -21,15 +25,17 @@ main
 {
     margin-left: auto;
     height: 10px;
-    padding: 1% 10vh;
+    padding: 0 10vh;
+    margin-top: 1.5vh;
 }
 #right > a 
 {
-    margin: 0 1vw;
+    margin: 0 0;
 }
 #left
 {
     margin-right: auto;
+    margin-top: 1vh;
 }
 
 #post-box
@@ -44,17 +50,18 @@ main
 {
     display: flex;
     border-bottom: 1px solid;
-    padding: 1% 3%;
+    padding: 0.1% 3%;
 }
 #username
 {
     font-size: 19px;
-    margin: 10px 0;
+    margin: 0 1.5vw;
 }
 #date
 {
     margin-left: auto;
     width: 10%;
+    margin-top: 3vh;
 }
 #post-content
 {

@@ -1,7 +1,8 @@
 <?php
     include("../DATABASE/connection.php");
     session_start(); 
-    $username = $_SESSION['nickname']
+    $username = $_SESSION['nickname'];
+    $profile = $_SESSION['profile'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,14 +11,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP - MAIN</title>
     <link rel="stylesheet" href="css/feed.css">
+    <style>
+        .imgprofile
+        {
+            width: 50px;
+            height: 50px;
+            border: 2px solid;
+            border-radius: 100px;
+        }
+        #right > a 
+        {
+            margin: 2.5vh 1vw;
+        }
+        #right
+        {
+            margin-left: auto;
+            height: 10px;
+            padding: 0 10vh;
+            display: flex;
+        }
+        #profile > img
+        {
+            border: 1px solid;
+            border-radius: 50px;
+            width: 60px;
+            height: 60px;
+            margin: 1vh 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav id="left">
-            <img src="../imgs/php.png" alt="" srcset="">
+            <img src="../imgs/php.png" alt="" srcset="" onclick=" window.location.href = '/PHP/miniblog' ">
         </nav>
         <nav id="right">
-            <a href="posts.php">CRIE SUA POSTAGEM</a> <a href="../profile/index.php"><?php echo "$username";?></a>
+            <a href="posts.php">CRIE SUA POSTAGEM</a> <a href="../profile/index.php"><?php echo "$username";?></a><img src="<?php echo "$profile" ?>" class="imgprofile" alt="">
         </nav>
     </header>
     <main>
@@ -40,7 +69,8 @@
                     ?>
                     <article id="post-box">
                         <div id="post-header">
-                            <div id="username"><?php echo $row['username']; ?></div>
+                            <div id="profile"><img src="<?php echo ''.$row["img_path"].'' ?>" alt=""></div>
+                            <div id="username"><h2><?php echo $row['username']; ?></h2></div>
                             <div id="date"><div id="hour"><?php echo $row['PostHour']; ?></div><div id="day"><?php echo $row['PostDay']; ?></div></div>
                         </div>
                         
