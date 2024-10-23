@@ -7,7 +7,9 @@
         $nickname = $mysqli->real_escape_string($_POST["nickname"]);
         echo "$nickname";
         $query2 = "UPDATE users_profile SET nickname = '$nickname' where id_user = '$id'";
+        $query_post = "UPDATE POSTS SET username = '$nickname' where id_user = '$id'";
         $result2 = $mysqli->query($query2) or die(mysqli_error($mysqli));
+        $result2 = $mysqli->query($query_post) or die(mysqli_error($mysqli));
         $_SESSION['nickname'] = $nickname;
         ?>
             <script>window.location.href="./"</script>
@@ -43,6 +45,8 @@
         if ($deu_certo)
         {
             $mysqli->query("UPDATE profile_img SET img_path = '$path' where id_img = '$id'") or die($mysqli->error);
+            $query_post = "UPDATE POSTS SET img_path = '$path' where id_user = '$id'";
+            $result2 = $mysqli->query($query_post) or die(mysqli_error($mysqli));
             $_SESSION['profile'] = $path;
             header("Location: /php/profile");
         } else{
