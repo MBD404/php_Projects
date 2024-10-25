@@ -19,7 +19,7 @@
         echo "$data";
         echo "$hour";
 
-        $query = "INSERT INTO POSTS (id,username,title,post,PostDay,PostHour, img_path, id_user, id_post) VALUES(default,'".$username."','".$Title."','".$text."','".$data."','".$hour."','".$path."','".$id_user."', '".$id_post."',0,0,0,0)";
+        $query = "INSERT INTO POSTS (id,username,title,post,PostDay,PostHour, img_path, id_user, id_post) VALUES(default,'".$username."','".$Title."','".$text."','".$data."','".$hour."','".$path."','".$id_user."', '".$id_post."')";
         $result = $mysqli->query($query) or $mysqli.die("ERRO AO INSERIR POSTAGEM : ".mysqli_error($mysqli));
         ?><script>window.location.href="./"</script><?php
     }
